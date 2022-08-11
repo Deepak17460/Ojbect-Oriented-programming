@@ -1,0 +1,48 @@
+ #include<bits/stdc++.h>
+ using namespace std;
+ 
+class Hero{
+    public:
+    int health;
+    char level;
+};
+
+int main(){
+    Hero deepak;
+    Hero.health=22;
+    Hero.level='A';
+    cout<<"Health of Deepak "<<deepak.health<<endl;
+    cout<<"Level of deepak "<<deepak.level<<endl;
+}
+
+// Second  part of Object creation and Class
+
+#include<iostream>
+
+using namespace std;
+
+
+
+class Define{
+    public:
+    Define(){
+        cout<<" Constructor called "<<endl;
+    }
+    int Integer;
+    string name;
+};
+
+int main(){
+    // Object creation statically
+    Define num;
+    num.Integer=20;
+    num.name="Postive integer";
+    cout<<"Integer value ="<<num.Integer<<endl;
+    cout<<" Name "<<num.name<<endl;
+    // Obect creation dynamically
+    Define* num1=new Define();
+    num1->Integer=40;
+    num1->name="Positve integer";
+    cout<<"Integer value "<<num1->Integer<<endl;
+    cout<<"Name "<<num1->name<<endl;
+}
