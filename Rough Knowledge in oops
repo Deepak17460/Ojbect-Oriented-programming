@@ -1,0 +1,244 @@
+ #include<bits/stdc++.h>
+
+ using namespace std;
+
+
+class Hero{
+    public:
+    int health;
+    private:
+    char level;
+    void print(char ch){
+        this->level=ch;
+        cout<<level<<endl;
+    }
+};
+
+int main(){
+    // deepak.Hero() or deepak.Hero constructor calling
+    Hero deepak;
+    deepak.health=22;
+//deepak.level='A';
+    cout<<"Health of Deepak "<<deepak.health<<endl;
+   // cout<<"Level of deepak "<<deepak.level<<endl;
+   print('A');
+}
+// Second part
+
+ #include<bits/stdc++.h>
+
+ using namespace std;
+
+
+class Hero{
+    public:
+    Hero(){
+        cout<<"Constructor called"<<endl;
+    }
+    int health;
+    char level;
+    void print(){
+        
+        cout<<level<<endl;
+    }
+};
+
+int main(){
+    // deepak.Hero() or deepak.Hero constructor calling
+    // statically
+    Hero deepak;
+    deepak.health=22;
+    deepak.level='A';
+    cout<<"Health of Deepak "<<deepak.health<<endl;
+    cout<<"Level of deepak "<<deepak.level<<endl;
+    cout<<endl;
+    // Dynamically Object creation
+   // Hero* hero=new Hero();
+    Hero*hero=new Hero;
+    // deference operator (*hero)
+    hero->health=70;
+    hero->level='B';
+      cout<<"Health of Deepak "<<(*hero).health<<endl;
+    cout<<"Level of deepak "<<(*hero).level<<endl;
+    cout<<endl;
+    // Address of Hero
+    cout<<"Address of hero"<<&hero<<endl;
+    // Size of hero
+    cout<<"Size of hero "<<sizeof(hero)<<endl;
+
+}
+// third understanding
+ #include<bits/stdc++.h>
+
+ using namespace std;
+
+
+class Hero{
+    public:
+    Hero(){
+        cout<<"Constructor called"<<endl;
+    }
+    int health;
+    char level;
+    Hero(int health){
+        cout<<"this-> "<<this<<endl;
+        this->health=health;
+    }
+    void print(){
+        
+        cout<<level<<endl;
+    }
+};
+
+int main(){
+    // deepak.Hero() or deepak.Hero constructor calling
+    // statically
+      Hero deepak(20);
+      cout<<"Address of Deepak "<<&deepak<<endl;
+    // deepak.health=22;
+    // deepak.level='A';
+    // cout<<"Health of Deepak "<<deepak.health<<endl;
+    // cout<<"Level of deepak "<<deepak.level<<endl;
+    // cout<<endl;
+    // Dynamically Object creation
+   // Hero* hero=new Hero();
+    Hero*hero=new Hero(70);
+    // deference operator (*hero)
+    // hero->health=70;
+    // hero->level='B';
+    //   cout<<"Health of Deepak "<<(*hero).health<<endl;
+    // cout<<"Level of deepak "<<(*hero).level<<endl;
+    // cout<<endl;
+    // // Address of Hero
+    //cout<<"Address of hero"<<&hero<<endl;
+    // // Size of hero
+    // cout<<"Size of hero "<<sizeof(hero)<<endl;
+
+}
+// Third Point
+
+ #include<bits/stdc++.h>
+
+ using namespace std;
+
+
+class Hero{
+    public:
+    // Unparameterized constructor
+    Hero(){
+        cout<<"Constructor called"<<endl;
+    }
+    int health;
+    char level;
+    // Parameterized constructor
+    Hero(int health){
+        cout<<"this-> "<<this<<endl;
+        this->health=health;
+    }
+    Hero(int health,char level){
+        // using this keyword
+        this->health=health;
+        this->level=level;
+    }
+    void print(){
+        cout<<health<<endl;
+        cout<<level<<endl;
+    }
+};
+
+int main(){
+    // deepak.Hero() or deepak.Hero constructor calling
+    // statically
+      Hero deepak(20);
+      deepak.print();
+      cout<<"Address of Deepak "<<&deepak<<endl;
+    // deepak.health=22;
+    // deepak.level='A';
+    // cout<<"Health of Deepak "<<deepak.health<<endl;
+    // cout<<"Level of deepak "<<deepak.level<<endl;
+    // cout<<endl;
+    // Dynamically Object creation
+   // Hero* hero=new Hero();
+    Hero*hero=new Hero(70);
+    hero->print();
+    // deference operator (*hero)
+    // hero->health=70;
+    // hero->level='B';
+    //   cout<<"Health of Deepak "<<(*hero).health<<endl;
+    // cout<<"Level of deepak "<<(*hero).level<<endl;
+    // cout<<endl;
+    // // Address of Hero
+    //cout<<"Address of hero"<<&hero<<endl;
+    // // Size of hero
+    // cout<<"Size of hero "<<sizeof(hero)<<endl;
+    Hero temp(22,'C');
+    temp.print();
+
+}
+
+// Defualt Constructor
+
+ #include<bits/stdc++.h>
+
+ using namespace std;
+
+
+class Hero{
+    public:
+    // Unparameterized constructor
+    // Hero(){
+    //     cout<<"Constructor called"<<endl;
+    // }
+    int health;
+    char level;
+    // Parameterized constructor
+    Hero(int health){
+        cout<<"this-> "<<this<<endl;
+        this->health=health;
+    }
+    Hero(int health,char level){
+        // using this keyword
+        this->health=health;
+        this->level=level;
+    }
+    void print(){
+        cout<<health<<endl;
+        cout<<level<<endl;
+    }
+};
+
+int main(){
+    // deepak.Hero() or deepak.Hero constructor calling
+    // statically
+    Hero Bhardwaj;
+      Hero deepak(20);
+      deepak.print();
+      cout<<"Address of Deepak "<<&deepak<<endl;
+    // deepak.health=22;
+    // deepak.level='A';
+    // cout<<"Health of Deepak "<<deepak.health<<endl;
+    // cout<<"Level of deepak "<<deepak.level<<endl;
+    // cout<<endl;
+    // Dynamically Object creation
+   // Hero* hero=new Hero();
+    Hero*hero=new Hero(70);
+    hero->print();
+    // deference operator (*hero)
+    // hero->health=70;
+    // hero->level='B';
+    //   cout<<"Health of Deepak "<<(*hero).health<<endl;
+    // cout<<"Level of deepak "<<(*hero).level<<endl;
+    // cout<<endl;
+    // // Address of Hero
+    //cout<<"Address of hero"<<&hero<<endl;
+    // // Size of hero
+    // cout<<"Size of hero "<<sizeof(hero)<<endl;
+    Hero temp(22,'C');
+    temp.print();
+
+}
+
+// If any constructor would be made in oops then inbuilt constrcutor or defualt constructor will be killed, The system which creates the COnstructor
+
+
+
